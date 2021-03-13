@@ -1,0 +1,40 @@
+@import "reset";
+//Variables: Fonts
+$fontFamily: "Kumbh Sans";
+$fontWeigth: 400;
+$fontWeigthBold: 700;
+$fontSize: 18px;
+//Variables: Colors
+$cyan: hsl(187,75%,39%);
+$darkGray: hsl(229,23%,23%);
+$lightGray: hsl(227,10%,46%);
+
+//Variables: Screen Sizes
+$mobileSize: 375px;
+$desktopSize: 1440px;
+body{
+    height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    font-family: $fontFamily;
+    width: 334px;
+    border-radius: 15px;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .card_header{
+        width: 100%;
+        height: 10vh;
+        background-image: url("../images/bg-pattern-card.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px  15px 0 0;
+    }
+}
