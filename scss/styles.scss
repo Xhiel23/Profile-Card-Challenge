@@ -18,23 +18,89 @@ body{
     flex-direction: column; 
     justify-content: center;
     align-items: center;
+    background: url(../images/bg-pattern-bottom.svg) bottom -600px right -150px no-repeat, url(../images/bg-pattern-top.svg) top -500px left -200px no-repeat;
+    background-color: hsl(185, 75%, 39%);
 }
 .card{
     font-family: $fontFamily;
-    width: 334px;
+    width: 400px;
+    height: 420px;
     border-radius: 15px;
-    background-color: cadetblue;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     .card_header{
         width: 100%;
-        height: 10vh;
-        background-image: url("../images/bg-pattern-card.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 15px  15px 0 0;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+        }
+
     }
+    .card_body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        .card_body_img{
+            img{
+                border-radius: 50%;
+                border: 3px solid white;
+            } 
+        }
+        .card_body_info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1em;
+            .info_name_age{
+                display: flex;
+                flex-direction: row nowrap;
+                align-items: center;
+                justify-content: center;
+                font-weight: $fontWeigthBold;
+                font-size: $fontSize;
+                .name{
+                    padding: .5em;
+                }
+                .age{
+                    color: $lightGray;
+                    font-weight: $fontWeigth;
+                }
+            }
+            .info_location{
+                font-weight: $fontWeigth;
+                color: $lightGray;
+            }
+        }
+        .card_body_media{
+            width: 100%;
+            margin: auto;
+            border-top: 1px solid $lightGray;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 2em;
+            .media_box{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                h3{
+                    font-weight: $fontWeigthBold;
+                    font-size: $fontSize;
+                    padding: 0 1em;
+                }
+            }
+        }
+    }
+
 }
