@@ -3,11 +3,12 @@
 $fontFamily: "Kumbh Sans";
 $fontWeigth: 400;
 $fontWeigthBold: 700;
-$fontSize: 18px;
+$fontSize: 20px;
 //Variables: Colors
 $cyan: hsl(187,75%,39%);
 $darkGray: hsl(229,23%,23%);
 $lightGray: hsl(227,10%,46%);
+$lightlightGray: hsl(0, 0%, 59%);
 
 //Variables: Screen Sizes
 $mobileSize: 375px;
@@ -41,7 +42,6 @@ body{
             width: 100%;
             border-radius: 15px 15px 0 0;
         }
-
     }
     .card_body{
         display: flex;
@@ -49,10 +49,14 @@ body{
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        position: relative;
         .card_body_img{
+            position: absolute;
+            top: -50%;
             img{
                 border-radius: 50%;
-                border: 3px solid white;
+                border: 5px solid white;
+                transform: scale(1.1);
             } 
         }
         .card_body_info{
@@ -60,7 +64,7 @@ body{
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            padding: 1em;
+            padding: 1em 0 2em 0;
             .info_name_age{
                 display: flex;
                 flex-direction: row nowrap;
@@ -68,8 +72,9 @@ body{
                 justify-content: center;
                 font-weight: $fontWeigthBold;
                 font-size: $fontSize;
+                padding: .7em;
                 .name{
-                    padding: .5em;
+                    padding-right: .5em;
                 }
                 .age{
                     color: $lightGray;
@@ -84,23 +89,29 @@ body{
         .card_body_media{
             width: 100%;
             margin: auto;
-            border-top: 1px solid $lightGray;
+            border-top: 1px solid $lightlightGray;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            padding: 2em;
+            padding: 1.2em 0;
             .media_box{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
+                padding: 1em;
                 h3{
                     font-weight: $fontWeigthBold;
                     font-size: $fontSize;
-                    padding: 0 1em;
+                }
+                p{
+                    color: $lightlightGray;
+                    letter-spacing: 2px;
+                    font-weight: $fontWeigth;
+                    font-size: 11px;
+                    padding: 0.5em;
                 }
             }
         }
     }
-
 }

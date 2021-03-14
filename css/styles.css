@@ -80,25 +80,31 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 100%; }
-    .card .card_body .card_body_img img {
-      border-radius: 50%;
-      border: 3px solid white; }
+    width: 100%;
+    position: relative; }
+    .card .card_body .card_body_img {
+      position: absolute;
+      top: -50%; }
+      .card .card_body .card_body_img img {
+        border-radius: 50%;
+        border: 5px solid white;
+        transform: scale(1.1); }
     .card .card_body .card_body_info {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      padding: 1em; }
+      padding: 1em 0 2em 0; }
       .card .card_body .card_body_info .info_name_age {
         display: flex;
         flex-direction: row nowrap;
         align-items: center;
         justify-content: center;
         font-weight: 700;
-        font-size: 18px; }
+        font-size: 20px;
+        padding: .7em; }
         .card .card_body .card_body_info .info_name_age .name {
-          padding: .5em; }
+          padding-right: .5em; }
         .card .card_body .card_body_info .info_name_age .age {
           color: #6a6f81;
           font-weight: 400; }
@@ -108,18 +114,24 @@ body {
     .card .card_body .card_body_media {
       width: 100%;
       margin: auto;
-      border-top: 1px solid #6a6f81;
+      border-top: 1px solid #969696;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      padding: 2em; }
+      padding: 1.2em 0; }
       .card .card_body .card_body_media .media_box {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center; }
+        align-items: center;
+        padding: 1em; }
         .card .card_body .card_body_media .media_box h3 {
           font-weight: 700;
-          font-size: 18px;
-          padding: 0 1em; }
+          font-size: 20px; }
+        .card .card_body .card_body_media .media_box p {
+          color: #969696;
+          letter-spacing: 2px;
+          font-weight: 400;
+          font-size: 11px;
+          padding: 0.5em; }
 /*# sourceMappingURL=styles.css.map */
